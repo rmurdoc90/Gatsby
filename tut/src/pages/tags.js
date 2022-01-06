@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
 
-export default function contact() {
+export default function tags() {
   return (
     <Layout>
-      <h1>Contact Page</h1>
+      <h1>tags Page</h1>
     </Layout>
   )
 }

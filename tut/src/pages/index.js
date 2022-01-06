@@ -1,22 +1,22 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/Layout"
+import styled from "styled-components"
 
 export default function index() {
   return (
-    <div>
-      <Layout>
-      <h1>home page</h1>
-      <div>
-        <Link to="/">Home</Link>
-      </div>
-      <div>
-        <Link to="/about">About</Link>
-      </div>
-      <div>
-        <Link to="/company/company">Company/Company</Link>
-      </div>
-      </Layout>
-    </div>
+    <Layout>
+      <Wrapper>
+        <h1>home page</h1>
+      </Wrapper>
+    </Layout>
   )
 }
+
+const Wrapper = styled.section`
+  font-size: 1rem;
+  color: green;
+
+  h1 {
+    color: yellowgreen;
+  }
+`
