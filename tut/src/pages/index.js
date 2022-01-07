@@ -2,11 +2,11 @@ import React from "react"
 import Layout from "../components/Layout"
 import styled from "styled-components"
 
-export default function index() {
+export default function Home() {
   return (
     <Layout>
       <Wrapper>
-        <h1>home page</h1>
+        <h1>Home page</h1>
       </Wrapper>
     </Layout>
   )
