@@ -1,4 +1,4 @@
-import React,{useState} from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { FiAlignJustify } from "react-icons/fi"
 import logo from "../assets/images/logo.svg"
@@ -12,11 +12,11 @@ export default function Navbar() {
           <Link to="/">
             <img src={logo} alt="simple recipes" />
           </Link>
-          <button className="nav-btn" onClick={()=> setShow(!show)}>
+          <button className="nav-btn" onClick={() => setShow(!show)}>
             <FiAlignJustify />
           </button>
         </div>
-        <div className={show ? 'nav-links show-links' : 'nav-links'}>
+        <div className={show ? "nav-links show-links" : "nav-links"}>
           <Link to="/" className="nav-link" activeClassName="active-link">
             home
           </Link>
@@ -24,17 +24,28 @@ export default function Navbar() {
             to="/recipes"
             className="nav-link"
             activeClassName="active-link"
+            onClick={() => setShow(false)}
           >
             recipes
           </Link>
-          <Link to="/about" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/about"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(false)}
+          >
             about
           </Link>
-          <Link to="/tags" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/tags"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(false)}
+          >
             tags
           </Link>
           <div className="nav-link contact-link">
-            <Link to="/contact" className="btn">
+            <Link to="/contact" className="btn" onClick={() => setShow(false)}>
               Contact
             </Link>
           </div>
