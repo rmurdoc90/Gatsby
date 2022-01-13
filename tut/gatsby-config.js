@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Simply Recipes`,
@@ -28,10 +32,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        name: `styles`,
-        path: `${__dirname}/src/assets/css`,
+        spaceId: `gv5cvgjv0md7`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
     `gatsby-transformer-sharp`,
