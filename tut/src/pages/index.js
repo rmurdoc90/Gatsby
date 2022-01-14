@@ -22,7 +22,7 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <AllRecipes/>
+        <AllRecipes />
       </main>
     </Layout>
   )
