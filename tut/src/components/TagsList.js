@@ -1,7 +1,14 @@
 import React from "react"
 
-const TagsList = () => {
-  return <div>tags list</div>
+const TagsList = ({recipes = []}) => {
+  return (
+    <div className="">
+      {recipes.map(recipes=>{
+        
+      })}
+
+    </div>
+  )
 }
 
 export default TagsList
