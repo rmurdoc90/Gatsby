@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import RecipesList from "../components/RecipesList"
 import { graphql } from "gatsby"
 
-export default function Contact({data}) {
+export default function Contact({ data }) {
   const recipes = data.allContentfulRecipes.nodes
   return (
     <Layout>
@@ -43,7 +43,7 @@ export default function Contact({data}) {
           </article>
         </section>
         <section className="featured-recipes">
-          <RecipesList recipes={recipes}/>
+          <RecipesList recipes={recipes} />
         </section>
       </main>
     </Layout>
@@ -53,8 +53,8 @@ export default function Contact({data}) {
 export const query = graphql`
   {
     allContentfulRecipes(
-      sort: {fields: title, order: ASC}
-      filter: {featured: {eq: true}}
+      sort: { fields: title, order: ASC }
+      filter: { featured: { eq: true } }
     ) {
       nodes {
         id

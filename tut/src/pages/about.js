@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import RecipesList from "../components/RecipesList"
 
-export default function About({data}) {
+export default function About({ data }) {
   const recipes = data.allContentfulRecipes.nodes
   return (
     <Layout>
@@ -34,7 +34,7 @@ export default function About({data}) {
           />
         </section>
         <section className="featured-recipes">
-          <RecipesList recipes={recipes}/>
+          <RecipesList recipes={recipes} />
         </section>
       </main>
     </Layout>
@@ -44,8 +44,8 @@ export default function About({data}) {
 export const query = graphql`
   {
     allContentfulRecipes(
-      sort: {fields: title, order: ASC}
-      filter: {featured: {eq: true}}
+      sort: { fields: title, order: ASC }
+      filter: { featured: { eq: true } }
     ) {
       nodes {
         id
@@ -59,4 +59,3 @@ export const query = graphql`
     }
   }
 `
-
