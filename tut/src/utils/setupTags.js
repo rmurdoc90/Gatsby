@@ -1,4 +1,3 @@
-
 const setupTags = recipes => {
   const allTags = {}
 
@@ -17,7 +16,6 @@ const setupTags = recipes => {
     return firstTag.localeCompare(secondTag)
   })
   return newTags
-
 }
 
 export default setupTags
