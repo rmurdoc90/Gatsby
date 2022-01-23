@@ -2,13 +2,15 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import setupTags from "../utils/setupTags"
-const slugify = require("slugify")
+import SEO from "../components/SEO"
 
+const slugify = require("slugify")
 
 export default function Tags({ data }) {
   const newTags = setupTags(data.allContentfulRecipes.nodes)
   return (
     <Layout>
+      <SEO title='Tags'/>
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {
