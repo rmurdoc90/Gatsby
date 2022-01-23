@@ -3,6 +3,8 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import { BsClock, BsClockHistory, BsPeople } from "react-icons/bs"
+import SEO from "../components/SEO"
+
 const slugify = require("slugify")
 
 const RecipeTemplate = ({ data }) => {
@@ -19,6 +21,7 @@ const RecipeTemplate = ({ data }) => {
   const { tags, instructions, ingredients, tools } = content
   return (
     <Layout>
+      <SEO title={title} />
       <main className="page">
         <div className="recipe-page">
           {/* hero */}
