@@ -16,7 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allContentfulRecipes.nodes.forEach(recipe => {
     recipe.content.tags.forEach(tag => {
       createPage({
-        path: `/${tag}`,
+        path: `/tags/${tag}`,
         component: path.resolve(`src/template/tag-template.js`),
         context: {
           tag: tag,
@@ -24,13 +24,4 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
   })
-  // createPage(
-  //   {
-  //     path: "/using-dsg",
-  //     component: require.resolve("./src/templates/using-dsg.js"),
-  //     context: {},
-  //     defer: true,
-  //   },
-  //   {}
-  // )
 }

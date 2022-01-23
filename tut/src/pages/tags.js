@@ -10,7 +10,7 @@ export default function Tags({ data }) {
   const newTags = setupTags(data.allContentfulRecipes.nodes)
   return (
     <Layout>
-      <SEO title='Tags'/>
+      <SEO title="Tags" />
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {

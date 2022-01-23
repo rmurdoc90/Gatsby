@@ -6,7 +6,7 @@ import SEO from "../components/SEO"
 export default function Recipes() {
   return (
     <Layout>
-      <SEO title='Recipes'/>
+      <SEO title="Recipes" />
       <main className="page">
         <AllRecipes />
       </main>
