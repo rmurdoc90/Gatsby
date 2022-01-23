@@ -10,6 +10,7 @@ export default function Error() {
         <section>
           <h1>404</h1>
           <h3>page not found</h3>
+          <h4>try going back to the Home page</h4>
         </section>
       </main>
     </Layout>

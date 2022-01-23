@@ -8,7 +8,7 @@ export default function Contact({ data }) {
   const recipes = data.allContentfulRecipes.nodes
   return (
     <Layout>
-      <SEO title='Contact'/>
+      <SEO title="Contact" />
       <main className="page">
         <section classname="contact-page">
           <article className="contact-info">
